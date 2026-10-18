@@ -107,7 +107,7 @@ h1 {
 .fila:hover {
     transform: translateY(-8px) rotate(-1deg);
     /* Ligera inclinación divertida */
-    box-shadow: 8px 12px 0px #4ade80;
+    box-shadow: 8px 12px 0px #d1670a;
     background-color: #f0fdf4;
     /* Cambio a un fondo verde pastel tenue */
 }

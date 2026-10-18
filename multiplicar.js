@@ -1,21 +1,27 @@
 function generarTablas() {
-    let contenedor = document.getElementById("tabla");
-    let numero = document.getElementById("txtTabla").value;
+    let contenedor = document.getElementById("ContenedorTabla");
+    let inputNumero = document.getElementById("txtTabla").value.trim();
 
-    // Validación si el campo está vacío
-    if (numero === "") {
+    if (inputNumero === "") {
         alert("Por favor, ingresa un número para generar la tabla.");
         return;
     }
 
-    let contenido = '<h1>✨ Tabla de Multiplicar del ' + numero + ' ✨</h1>';
-    contenido = contenido + '<div class="tabla">';
+    let numero = Number(inputNumero);
 
-    for (let i = 1; i <= 10; i++) {
-        contenido = contenido + '<div class="fila">' + numero + ' × ' + i + ' = ' + (numero * i) + '</div>';
+    if (isNaN(numero) || !Number.isInteger(numero) || numero <= 0) {
+        alert("Por favor, ingresa únicamente un número entero positivo (ej. 1, 2, 5, 12).");
+        return;
     }
 
-    contenido = contenido + '</div>';
+    let contenido = '<h1>✨ Tabla de Multiplicar del ' + numero + ' ✨</h1>';
+    contenido += '<div class="tabla">';
+
+    for (let i = 1; i <= 10; i++) {
+        contenido += '<div class="fila">' + numero + ' × ' + i + ' = ' + (numero * i) + '</div>';
+    }
+
+    contenido += '</div>';
 
     contenedor.innerHTML = contenido;
 }

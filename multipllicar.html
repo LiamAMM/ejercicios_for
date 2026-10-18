@@ -10,12 +10,19 @@
 
 <body>
 
-    <!-- Botón en la parte superior -->
+    <!-- Botón e Instrucciones en la parte superior -->
     <header class="header-top">
-        <button class="btn-probar" onclick="generarTablas()">¡PROBAR! 🚀</button>
+        <div class="instrucciones-box">
+            <label for="txtTabla" class="lbl-instruccion">Escribe un número para calcular su tabla:</label>
+            <div class="grupo-control">
+                <input type="number" id="txtTabla" class="caja-texto" placeholder="Ej. 5, 7, 12..." min="1">
+                <button class="btn-probar" onclick="generarTablas()">¡PROBAR! 🚀</button>
+            </div>
+            <span class="txt-ayuda">💡 Escribe cualquier número entero y presiona PROBAR.</span>
+        </div>
     </header>
 
-    <!-- Contenido principal: Tabla del 3 -->
+    <!-- Contenido principal: Tabla de Multiplicar -->
     <main class="contenedor" id="tabla">
         <h1>✨ Tabla de Multiplicar del 3 ✨</h1>
 

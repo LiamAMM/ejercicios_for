@@ -1,0 +1,141 @@
+/* Importación de tipografía redondeada e infantil desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
+
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Fredoka', 'Comic Sans MS', cursive, sans-serif;
+    background-color: #e0f2fe;
+    /* Azul pastel suave */
+    background-image: radial-gradient(#bae6fd 2px, transparent 2px);
+    background-size: 24px 24px;
+    /* Patrón sutil de puntos de fondo */
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor del botón superior */
+.header-top {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+/* Estilos del botón PROBAR (Estilo Sticker Caricatura) */
+.btn-probar {
+    background-color: #ffde59;
+    /* Amarillo alegre */
+    color: #1e293b;
+    border: 3px solid #1e293b;
+    padding: 12px 28px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #1e293b;
+    /* Sombra marcada estilo comic */
+    transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color 0.2s;
+}
+
+.btn-probar:hover {
+    background-color: #ffcd38;
+    transform: translateY(-4px) scale(1.05);
+    /* Efecto rebote */
+    box-shadow: 6px 6px 0px #1e293b;
+}
+
+.btn-probar:active {
+    transform: translateY(2px) scale(0.98);
+    box-shadow: 2px 2px 0px #1e293b;
+}
+
+/* Contenedor principal */
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #0284c7;
+    /* Azul brillante */
+    text-shadow: 2px 2px 0px #ffffff, 4px 4px 0px #bae6fd;
+    letter-spacing: 1px;
+}
+
+/* Cuadrícula adaptable (Responsive Grid) */
+.grid-tabla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Tarjetas individuales para cada operación */
+.card-item {
+    background-color: #ffffff;
+    padding: 22px 15px;
+    border-radius: 24px;
+    border: 3.5px solid #1e293b;
+    box-shadow: 5px 5px 0px #86efac;
+    /* Sombra verde pastel estilo sticker */
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+/* Animación de rebote al pasar el cursor sobre las tarjetas */
+.card-item:hover {
+    transform: translateY(-8px) rotate(-1deg);
+    /* Ligera inclinación divertida */
+    box-shadow: 8px 12px 0px #4ade80;
+    background-color: #f0fdf4;
+    /* Cambio a un fondo verde pastel tenue */
+}
+
+/* Colores alternados en los bordes superiores de las tarjetas */
+.card-item:nth-child(odd) {
+    border-top: 8px solid #38bdf8;
+    /* Azul */
+}
+
+.card-item:nth-child(even) {
+    border-top: 8px solid #facc15;
+    /* Amarillo */
+}
+
+/* Pie de página con diseño infantil */
+.footer {
+    margin-top: 40px;
+    padding: 12px 24px;
+    background-color: #ffffff;
+    border: 3px solid #1e293b;
+    border-radius: 18px;
+    box-shadow: 4px 4px 0px #1e293b;
+    font-size: 1.1rem;
+    color: #0f172a;
+}
+
+.footer strong {
+    color: #e11d48;
+    /* Rojo rosado vibrante */
+}
